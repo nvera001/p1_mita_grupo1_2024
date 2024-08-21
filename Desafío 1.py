@@ -47,7 +47,7 @@ def mostrar_matriz (matriz, estudiantes, materias):
     for i, fila in enumerate(matriz):
         print(f"{estudiantes[i]:<10} " + "  ".join(str(calificacion) for calificacion in fila))
         
-"""    
+    
 def calcular_promedio_estudiantes(matriz,estudiantes,materias):
     filas = len(matriz) #cantidad de filas
     columnas= len(matriz[0]) #cantidad de columnas
@@ -68,7 +68,7 @@ def calcular_promedio_materia(matriz,estudiantes,materias):
             suma += matriz[fil][col]
         prom = suma / len(estudiantes)
         print("El promedio de",materias[col],"fue de ",prom)
-"""
+
 print
 lista_estudiantes = ["Juan","Ana","Nicolas","Martin","Ariel"] 
 lista_materias = ["M", "H", "C", "I","B","T","G"] 
@@ -76,9 +76,8 @@ a=crear_matriz(len(lista_estudiantes),len(lista_materias))
 b=llenar_matriz(a)
 print()
 mostrar_matriz(b,lista_estudiantes,lista_materias)
-"""
+
 print()
 calcular_promedio_estudiantes(b,lista_estudiantes,lista_materias)
 print()
 calcular_promedio_materia(b,lista_estudiantes,lista_materias)
-"""
