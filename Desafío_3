@@ -1,0 +1,33 @@
+print()
+print("Bienvenidos a la aplicación del supermercado.")
+#Se define la lista de los productos.
+productos = [
+    [1001,"Jugo de Manzana",50000],
+    [1002,"Jugo de Pomelo",4000],
+    [1003,"Coca",6000],
+    [1004,"Sprite",80000],
+    [1005,"Agua",5000],
+    [1005,"Fanta",6000],
+    [1006,"Chocolate",4000],
+    [1007,"Rocklets",1000],
+    [1008,"Chupetín",500],
+    [1009,"Caramelos",100],
+    
+        ]
+
+#Se recortan los nombres de los productos a un máximo de 8 caracteres.
+productos_recortados = [[numero, nombre[:12], precio] for numero, nombre, precio in productos]
+
+#Lista ordenada descendente (valor de los productos) en caso de repetir, por codigo (ascendente)
+productos_ordenados = sorted (productos_recortados, key=lambda x: (-x[2], x[0]))
+
+#Asignación para poder mostrar las listas con encabezados.
+numero= "Código"
+nombre= "Producto"
+precio= "Valor"
+# Imprimir la lista ordenada con formato de f-strings
+print(f"|{numero:>6}| |{nombre:<12}| |{precio:>6}|")
+print("-" * 30)
+for numero, nombre, precio in productos_ordenados:
+    print(f"|{numero:^6}| |{nombre:^12}| |{precio:^6}|")
+
