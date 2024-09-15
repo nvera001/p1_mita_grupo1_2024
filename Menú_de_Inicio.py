@@ -1,4 +1,8 @@
-from Operaciones_CRUD import leer,crear,actualizar,eliminar
+from Operaciones_CRUD.Actualizar import actualizar
+from Operaciones_CRUD.Crear import crear
+from Operaciones_CRUD.Eliminar import eliminar
+from Operaciones_CRUD.Leer import leer
+
 print()
 #Se define la lista de los productos.
 productos = [
@@ -15,6 +19,7 @@ productos = [
         ]
 
 def menu_de_inicio():
+    print()
     print("Bienvenido a la aplicación del supermercado.")
     flag = True
     while flag!=False:

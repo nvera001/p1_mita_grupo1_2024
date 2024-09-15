@@ -12,7 +12,7 @@ def crear (lista):
                     codigo=int (input("Ingresar número de código del nuevo producto: "))
                 i += 1
             flag = True            
-
+        print()
         nomb=str (input("Ingresar nombre de nuevo producto: "))
         prec=int (input("Ingresar precio del nuevo producto: "))
         lista.append([codigo,nomb,prec])

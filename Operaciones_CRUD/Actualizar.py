@@ -1,7 +1,6 @@
 def actualizar (lista):
     flag = True
     while flag == True:
-        print()
         flag_2 = True
         pos = 0
         while flag_2 == True:
@@ -19,6 +18,7 @@ def actualizar (lista):
                 print()
                 print("Este es el legajo que va a actualizar: ")
                 print(lista[pos])#Lo imprimo para que el usuario vea lo que hay en la fila
+                print()
                 nom = str (input("Ingresar el nombre del nuevo producto: "))
                 prec = int (input("Ingresar precio del nuevo producto: "))
                 
