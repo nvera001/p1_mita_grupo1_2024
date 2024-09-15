@@ -1,4 +1,4 @@
-from Crud_Desafío_3 import leer,crear,actualizar,eliminar
+from Operaciones_CRUD import leer,crear,actualizar,eliminar
 print()
 #Se define la lista de los productos.
 productos = [

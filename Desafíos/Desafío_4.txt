@@ -1,0 +1,4 @@
+Descripción: Desarrollar una aplicación para gestionar una lista de objetos (por 
+ejemplo, usuarios, productos, etc.) utilizando operaciones CRUD. La aplicación debe 
+incorporar funciones lambda para realizar operaciones rápidas y módulos en Python 
+para organizar el código de manera modular.
