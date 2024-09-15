@@ -1,0 +1,46 @@
+Objetivo: Modificar el sistema desarrollado para incorporar el uso de 
+diccionarios en la gestión de una de las entidades atómicas. Además, mantener 
+al menos un CRUD utilizando matrices (lista de listas) para comparar el manejo 
+de datos entre ambos enfoques. Se sugiere utilizar listas de diccionarios como 
+un formato similar a JSON que será útil en futuras versiones del sistema. 
+Pasos a seguir: 
+1. Seleccionar una Entidad Atómica: 
+o Elijan una entidad atómica del sistema, como productos, alumnos, 
+empleados, etc. 
+2. Modificar el CRUD de la Entidad Seleccionada: 
+o CRUD con Diccionarios: 
+ Implementen o modifiquen el CRUD para la entidad 
+seleccionada utilizando diccionarios. Considera la 
+posibilidad de usar una lista de diccionarios si es más 
+adecuado. Cada diccionario en la lista representará una 
+instancia de la entidad y contendrá todos los atributos 
+relevantes. 
+o CRUD con Matrices (Lista de Listas): 
+ Asegúrense de que al menos una de las entidades del 
+sistema siga utilizando matrices (lista de listas) para su 
+gestión de datos. Implementen las operaciones de 
+inserción, actualización, eliminación y consulta utilizando 
+este enfoque. 
+3. Estructura del Diccionario y Lista de Diccionarios: 
+o Diccionario Simple: 
+productos = { 
+'P001': {'nombre': 'Televisor', 'precio': 30000, 'cantidad': 10}, 
+'P002': {'nombre': 'Refrigerador', 'precio': 50000, 'cantidad': 5}, 
+# más productos 
+} 
+o Lista de Diccionarios: 
+productos = [ 
+{'id': 'P001', 'nombre': 'Televisor', 'precio': 30000, 'cantidad': 10}, 
+{'id': 'P002', 'nombre': 'Refrigerador', 'precio': 50000, 'cantidad': 
+5}, 
+# más productos 
+] 
+4. Requisitos: 
+o Implementen funciones para agregar, actualizar, eliminar y 
+consultar entidades utilizando el formato de diccionario o lista de 
+diccionarios. 
+5. Entrega: 
+o Subir el código modificado a su repositorio de Git. 
+o Asegúrese de incluir ejemplos de cómo se utilizan los diccionarios 
+y listas de diccionarios en el CRUD, así como ejemplos de 
+operaciones realizadas. 

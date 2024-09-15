@@ -1,0 +1,9 @@
+Descripción: Desarrollar un módulo en el proyecto donde se implementen y apliquen 
+expresiones regulares para la validación de diversos campos de datos. Este desafío se 
+enfocará en que los estudiantes apliquen expresiones regulares para garantizar la 
+integridad de la información almacenada y procesada en el sistema. 
+Objetivo: Los estudiantes deberán integrar y utilizar expresiones regulares para validar 
+entradas del usuario en el sistema de gestión. Se trabajará con datos como, por ejemplo, 
+correos electrónicos, números de teléfono, códigos postales, y fechas. Además, deberán 
+asegurar que los datos cumplan con los formatos esperados y detectar errores en las 
+entradas antes de procesarlas. 

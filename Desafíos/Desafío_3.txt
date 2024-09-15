@@ -1,0 +1,32 @@
+Descripción: Desarrollar una aplicación para gestionar una matriz (por ejemplo, 
+productos, libros, tareas, etc.) utilizando operaciones CRUD (Crear, Leer, Actualizar, 
+Eliminar). La aplicación debe permitir la gestión de información asociada a cada 
+entidad, truncar datos cuando sea necesario, ordenar la matriz por uno o más criterios, y 
+formatear la salida de manera clara y organizada. 
+Funcionalidades del Desafío: 
+1. Recortar Datos: 
+o Descripción: Utilizar slicing para limitar la longitud de un campo de 
+texto (por ejemplo, el nombre, descripción, etc.) a un máximo de N 
+caracteres. 
+o Objetivo: Asegurarse de que los datos no excedan la longitud 
+especificada. 
+2. Convertir Datos a Formato Específico: 
+o Descripción: Convertir un campo de texto (por ejemplo, nombre, título, 
+etc.) a mayúsculas, minúsculas, o el formato requerido. 
+o Objetivo: Estandarizar el formato de los datos para su correcta 
+visualización. 
+3. Ordenar la Matriz: 
+o Descripción: Ordenar la matriz por un criterio principal (por ejemplo, 
+nombre, puntuación, etc.) en orden descendente, y por un criterio 
+secundario (por ejemplo, nombre, ID, etc.) en orden ascendente. 
+o Objetivo: Organizar los datos de manera que sean fáciles de analizar y 
+comparar. 
+4. Formato de Salida: 
+o Descripción: Utilizar f-strings para presentar los datos en un formato 
+tabular bien alineado y legible. 
+o Objetivo: Mejorar la presentación de los datos para facilitar su lectura. 
+5. CRUD (Crear, Leer, Actualizar, Eliminar): 
+o Crear: Permitir agregar nuevos registros a la matriz. 
+o Leer: Mostrar la lista de registros con formato claro. 
+o Actualizar: Editar los datos de una entidad existente. 
+o Eliminar: Eliminar un registro de la matriz.
