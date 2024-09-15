@@ -4,10 +4,10 @@ def leer (lista):
     productos_recortados = [[numero, nombre[:12], precio] for numero, nombre, precio in lista]
 
     # Aplicamos un descuento del 10% a todos los productos
-    productos_con_descuento = list(map(lambda x: [x[0], x[1], x[2] * 0.9], productos_recortados))
+    productos_con_descuento = list(map(lambda x: [x[0], x[1], int(x[2]) * 0.9], productos_recortados))
 
     # Luego, aplicamos el ordenamiento a la lista con descuento
-    productos_ordenados = sorted(productos_con_descuento, key=lambda x: (x[2], str(x[1]), -x[0]))
+    productos_ordenados = sorted(productos_con_descuento, key=lambda x: (int(x[2]), str(x[1]), int(x[0])))
 
     #Asignación para poder mostrar las listas con encabezados.
     numero= "Código"
