@@ -18,12 +18,12 @@ def actualizar (lista):
             
             validacion, posicion = validar_legajo (lista,legajo_actualizar)            
             if validacion == False:
-                print("No se ha podido encontrar ese legajo, ingrese otro.")
+                print("No se ha podido encontrar ese código, ingrese otro.")
                 print()
             if validacion == True:
                 flag_2 = False
                 print()
-                print("Este es el legajo que va a actualizar: ")
+                print("Este es el código que va a actualizar: ")
                 print(lista[posicion])#Lo imprimo para que el usuario vea lo que hay en la fila
                 print()
                 segur = (input("Está usted seguro que lo quiere actualizar? \n1 Sí \n2 No \nPor favor, elegir un número: "))
@@ -50,22 +50,22 @@ def actualizar (lista):
                         prec = (input("Ingresar precio del nuevo producto: "))
                     
                     for producto in lista:
-                        if producto[0] == lista[pos][0]:
+                        if producto[0] == lista[posicion][0]:
                             producto[1] = nom  # Cambia el nombre
                             producto[2] = prec               # Cambia el precio                
                     print()
-                    print("Legajo actualizado")
+                    print("Código actualizado")
                     print(lista[posicion])
                     print()
-                    preg = int (input("Desea actualizar otro legajo? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
+                    preg = (input("Desea actualizar otro código? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
                     while validar_num (preg) == False:
-                        preg = (input("Desea actualizar otro legajo? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
+                        preg = (input("Desea actualizar otro código? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
                     #Validación de número.
                     while validacion_2dig(preg) == False:
                         print()
-                        preg = (input("Desea actualizar otro legajo? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
+                        preg = (input("Desea actualizar otro código? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
                         while validar_num (preg) == False:
-                            preg = (input("Desea actualizar otro legajo? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
+                            preg = (input("Desea actualizar otro código? \n1 Sí \n2 No \nPor favor, elegir una opción: "))
                     
                     if preg == 2:
                         flag = False
