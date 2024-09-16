@@ -19,7 +19,7 @@ def validacion_2dig (texto):
         print("Por favor, ingresar un numero válido.")
         return False
 
-def validar_legajo (list, legajo):
+def validar_codigo (list, legajo):
     i = 0
     while i<(len(list)):
         if list[i][0] == int (legajo):
@@ -28,10 +28,11 @@ def validar_legajo (list, legajo):
         i += 1
     return False,i
 
-def validar_4dig_legajo (car):
+def validar_4dig_codigo (car):
     patron = "^[0-9]{4}$"
     if re.match(patron,car) == None:
         print("Por favor, ingresar un numero válido.")
+        print("El número debe ser de 4 valores.")
         return False
 
 def validar_let (car):

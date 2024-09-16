@@ -2,181 +2,47 @@ from Operaciones_CRUD.Actualizar import actualizar
 from Operaciones_CRUD.Crear import crear
 from Operaciones_CRUD.Eliminar import eliminar
 from Operaciones_CRUD.Leer import leer
-from Validaciones.Validaciones import validacion_5dig, validar_num, validacion_2dig, validacion_3dig
-
+from Validaciones.Validaciones import validacion_5dig, validar_num
+from Matriz_y_Diccionario.Matriz_Productos import productos
+from Matriz_y_Diccionario.Diccionario_Productos import cantidades_vendidas
 print()
 #Se define la lista de los productos.
-productos = [
-    [1001,"Jugo de manzana",50000],
-    [1002,"Jugo de pomelo",4000],
-    [1003,"Coca",6000],
-    [1004,"Tomate",80000],
-    [1005,"Agua",5000],
-    [1006,"Fanta",6000],
-    [1007,"Chocolate",4000],
-    [1008,"Rocklets",1000],
-    [1009,"Chupetín",500],
-    [1010,"Caramelos",100],
-        ]
 
 def menu_de_inicio():
     print
     print("Bienvenido a la aplicación del supermercado.")
     flag = True
     while flag!=False:
-        inicio=input("\nQué desea realizar? \n1 Listado de productos.\n2 Agregar nuevos registros a la lista.\n3 Editar un registro de la lista. \n4 Eliminar un registro de la lista. \n5 Salir de la aplicación. \nElija un numero: ") #Menú de inicio.
+        menu = "\nQué desea realizar? \n1 Listado de productos.\n2 Agregar nuevos registros a la lista.\n3 Editar un registro de la lista. \n4 Eliminar un registro de la lista. \n5 Salir de la aplicación. \nElija un numero: "
+        inicio=input(menu) #Menú de inicio.
         while validar_num(inicio) == False:
-            inicio=input("\nQué desea realizar? \n1 Listado de productos.\n2 Agregar nuevos registros a la lista.\n3 Editar un registro de la lista. \n4 Eliminar un registro de la lista. \n5 Salir de la aplicación. \nElija un numero: ") #Menú de inicio.
+            inicio=input(menu) #Menú de inicio.
         while validacion_5dig (inicio)== False:
-            inicio=input("\nQué desea realizar? \n1 Listado de productos.\n2 Agregar nuevos registros a la lista.\n3 Editar un registro de la lista. \n4 Eliminar un registro de la lista. \n5 Salir de la aplicación. \nElija un numero: ") #Menú de inicio.
+            inicio=input(menu) #Menú de inicio.
             while validar_num(inicio) == False:
-                inicio=input("\nQué desea realizar? \n1 Listado de productos.\n2 Agregar nuevos registros a la lista.\n3 Editar un registro de la lista. \n4 Eliminar un registro de la lista. \n5 Salir de la aplicación. \nElija un numero: ") #Menú de inicio.
+                inicio=input(menu) #Menú de inicio.
         
         if int (inicio)==1: #Muestra de registros.
-            leer (productos)
-            flag = False
-            muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-            while validar_num (muest) == False:
-                muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-            #Validación de número.
-            while validacion_2dig(muest) == False:
-                print()
-                muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                while validar_num (muest) == False:
-                        muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-
-            if int(muest) == 1:
-                flag = True
-            if int(muest) == 2:
-                print()
-                print("Saliendo de la aplicación")
-                flag = False
+            print()
+            leer (productos, cantidades_vendidas)
+            print()
        
         elif int (inicio) == 2: #Agregar nuevos registros.
             print()
-            crear(productos)
-            flag = False
+            crear(productos, cantidades_vendidas)
             print()
-            inicio_2=input("Finalizada la creación del nuevo registro, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            while validar_num (inicio_2) == False:
-                inicio_2=input("Finalizada la creación del nuevo registro, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            #Validación de número.
-            while validacion_3dig(inicio_2) == False:
-                print()
-                inicio_2=input("Finalizada la creación del nuevo registro, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-                while validar_num (inicio_2) == False:
-                    inicio_2=input("Finalizada la creación del nuevo registro, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            
-            if  int (inicio_2) == 1: #Ver el listado de los registros, incluido el nuevo.
-                leer(productos)
-                muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                while validar_num (muest) == False:
-                    muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                #Validación de número.
-                while validacion_2dig(muest) == False:
-                    print()
-                    muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                    while validar_num (muest) == False:
-                            muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-
-                if int(muest) == 1: #Volver al menú, despues de ver el listado de los registros (incluyendo al nuevo)
-                    flag = True
-                if int(muest) == 2:
-                    print()
-                    print("Saliendo de la aplicación") #Salir de la aplicacion,, despues de ver el listado de los registros (incluyendo al nuevo)
-                    flag = False
-                                        
-            elif  int (inicio_2)==2: #Volver al menu principal, sin ver el listado nuevo.
-                menu_de_inicio()
-                flag = False
-            elif int(inicio_2)==3: #Salir de la aplicacion, sin ver el listado nuevo.
-                print()
-                print("Saliendo de la aplicación.")
-                flag = False
-
-
 
         elif int (inicio) == 3: #Editar un registro de la lista.
             print()
-            actualizar (productos)
+            actualizar (productos, cantidades_vendidas)
             print()
-            inicio_2=input("Finalizada la actualización, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            while validar_num (inicio_2) == False:
-                inicio_2=input("Finalizada la actualización, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            #Validación de número.
-            while validacion_3dig(inicio_2) == False:
-                print()
-                inicio_2=input("Finalizada la actualización, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-                while validar_num (inicio_2) == False:
-                    inicio_2=input("Finalizada la actualización, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            
-            if  int (inicio_2) == 1: #Ver el listado de los registros, incluido el nuevo.
-                leer(productos)
-                muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                while validar_num (muest) == False:
-                    muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                #Validación de número.
-                while validacion_2dig(muest) == False:
-                    print()
-                    muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                    while validar_num (muest) == False:
-                            muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                            
-
-                if int(muest) == 1: #Volver al menú, despues de ver el listado de los registros (incluyendo al nuevo)
-                    print("Volviendo al menú principal.")
-                    print()
-                elif int(muest) == 2:
-                    print()
-                    print("Saliendo de la aplicación") #Salir de la aplicacion,, despues de ver el listado de los registros (incluyendo al nuevo)
-                    flag = False
-                                        
-            elif  int (inicio_2)==2: #Volver al menu principal, sin ver el listado nuevo.
-                menu_de_inicio()
-                flag = False
-            elif int(inicio_2)==3: #Salir de la aplicacion, sin ver el listado nuevo.
-                print()
-                print("Saliendo de la aplicación.")
-                flag = False
-
 
         elif int (inicio) == 4: #Eliminar uno de los registros.
-            eliminar(productos)
             print()
-            inicio_2=input("Finalizada la eliminación, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            while validar_num (inicio_2) == False:
-                inicio_2=input("Finalizada la eliminación, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            #Validación de número.
-            while validacion_3dig(inicio_2) == False:
-                print()
-                inicio_2=input("Finalizada la eliminación, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-                while validar_num (inicio_2) == False:
-                    inicio_2=input("Finalizada la eliminación, que desea realizar ahora?\n1 Ver el listado de los productos.\n2 Volver al menú de inicio.\n3 Salir de la aplicación. \nElegir una opción: ")
-            
-            
-            if  int (inicio_2) == 1: #Ver el listado de los registros, incluido el nuevo.
-                leer(productos)
-                muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                while validar_num (muest) == False:
-                    muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                #Validación de número.
-                while validacion_2dig(muest) == False:
-                    print()
-                    muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                    while validar_num (muest) == False:
-                            muest = input("\nQué desea realizar ahora? \n1 Volver al menú. \n2 Salir de la aplicación \nPor favor, elegir un número. ")
-                
-                if int(muest) == 1: #Volver al menú, despues de ver el listado de los registros (incluyendo al nuevo)
-                    print("Volviendo al menú principal.")
-                    print()
-                elif int(muest) == 2:
-                    print()
-                    print("Saliendo de la aplicación") #Salir de la aplicacion,, despues de ver el listado de los registros (incluyendo al nuevo)
-                    flag = False
+            eliminar(productos, cantidades_vendidas)
+            print()
 
-        elif int (inicio) == 5:
-            print()
-            print("Saliendo de la aplicación.")
+        elif int (inicio) == 5: #Sale de la aplicación.
             flag = False
     
 menu_de_inicio ()
