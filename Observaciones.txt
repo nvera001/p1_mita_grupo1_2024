@@ -1,0 +1,2 @@
+Tengo que cambiar la matriz de productos por un dicionario.
+Mientras que el diccionario de cantidades vendidas, pase a ser una matriz.
