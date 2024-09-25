@@ -1,4 +1,4 @@
-from Validaciones import validar_num,validacion_2dig, validar_codigo, validar_4dig_codigo
+from Validar.Validaciones import validar_num,validacion_2dig, validar_codigo, validar_4dig_codigo
 def eliminar (lista, dicc):
     flag = True
     while flag == True:

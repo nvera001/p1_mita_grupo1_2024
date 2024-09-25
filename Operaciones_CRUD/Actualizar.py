@@ -1,4 +1,4 @@
-from Validaciones import validar_num,validar_codigo,validar_4dig_codigo, validar_let,validacion_2dig,validar_letra
+from Validar.Validaciones import validar_num,validar_codigo,validar_4dig_codigo, validar_let,validacion_2dig,validar_letra
 def actualizar (lista, dicc):
     flag = True
     while flag == True:

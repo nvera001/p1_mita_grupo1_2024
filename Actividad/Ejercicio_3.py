@@ -1,7 +1,7 @@
-from Validaciones import validacion_2dig
-import re
+from Validar.Validaciones import validacion_2dig
 
 def validacion (cadena):
+    import re
     patron = r"[a-zA-Z0-9]{3,}@uade+\.edu+\.ar" # R String --> Para que tome las secuencias de escape bien (Daba un warning)
     buscar = re.findall (patron,cadena)
     if len(buscar)==0:
