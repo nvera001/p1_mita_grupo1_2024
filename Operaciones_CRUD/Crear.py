@@ -1,4 +1,4 @@
-from Validaciones.Validaciones import validar_num, validar_4dig_codigo, validar_codigo, validar_letra, validar_let
+from Validaciones import validar_num, validar_4dig_codigo, validar_codigo, validar_letra, validar_let
 def crear (lista, dicc):
     menu = "Ingresar cantidad de productos que quiere agregar al nuevo listado: "
     num=(input(menu))
