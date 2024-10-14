@@ -1,4 +1,3 @@
-from Validar.Validaciones import validacion_2dig
 
 def validacion (cadena):
     import re
@@ -29,8 +28,6 @@ while flag == False:
     print("Devolución de tupla, que muestra la división de los caractéres del mail",tup)
     print()
     opcion = input("Desea seguir?  \n1 Sí. \n2 No. \nElegir una opción: ")
-    while validacion_2dig(opcion) == False: 
-        opcion = input("Desea seguir?  \n1 Sí. \n2 No. \nElegir una opción: ")  
         
     if int (opcion) == 1:
         print("Continuará dividiendo mails.")
